@@ -11,4 +11,4 @@ company: 'Capstone'
 showInProjects: true
 ---
 
-Creating a blockchain wallet to store cryptocurrencies
+A blockchain wallet to store cryptocurrencies

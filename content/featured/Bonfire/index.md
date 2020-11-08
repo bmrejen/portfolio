@@ -11,4 +11,4 @@ tech:
 showInProjects: true
 ---
 
-A Wechat mini-program for older generations to tell their life stories and their grandchildren to listen to them.
+A Wechat mini-program for older generations to tell their life stories

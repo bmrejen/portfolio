@@ -5,7 +5,7 @@ github: 'https://github.com/bmrejen/fabacademy'
 external: 'http://fabacademy.org/2020/labs/oshanghai/students/benoit-mrejen/'
 tech:
   - Jekyll
-  - C
+  - C language
   - OpenCV
 company: 'AI glasses'
 showInProjects: true

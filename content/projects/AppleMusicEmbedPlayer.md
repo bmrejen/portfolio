@@ -10,4 +10,4 @@ company: 'Raspberry'
 showInProjects: true
 ---
 
-A home VPN to connect to
+A home VPN running on a Raspberry Pi

@@ -13,4 +13,6 @@ tech:
 showInProjects: true
 ---
 
-A front-end and back-end system for a French travel agency to accelerate the creation of new accounts on its internal network. Accelerated the process from 45 minutes to only 30 seconds.
+A front+back-end system for a travel agency to create/edit users on its internal network. 
+
+Used to take 45 minutes, now takes 30 seconds.
