@@ -2,7 +2,7 @@
 date: '2020-03-27'
 title: 'AI glasses'
 github: 'https://github.com/bmrejen/fabacademy'
-external: 'http://fabacademy.org/2020/labs/oshanghai/students/benoit-mrejen/'
+external: 'http://fabacademy.org/2020/labs/oshanghai/students/benoit-mrejen/_pages/20-Project-development.html'
 tech:
   - Jekyll
   - C language
