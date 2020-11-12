@@ -1,5 +1,5 @@
 ---
-date: '0'
+date: '4'
 title: 'Random Bookmark'
 cover: './demo.png'
 github: 'https://github.com/bmrejen/random-bookmark'
