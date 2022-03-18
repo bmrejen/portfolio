@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'Arduino', 'React', 'Angular', 'Solidity', 'Ruby on Rails'];
+  const skills = ['JavaScript (ES6+)', 'Arduino', 'React', 'Node.js', 'Solidity', 'Mongo'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,23 +141,23 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Ben, a software engineer based in Shanghai, China.</p>
+            <p>Hello! I'm Ben, a software engineer based in Paris, Tel-Aviv and Shanghai.</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites, bots, robots, 
-              applications, Wechat mini-programs, blockchains, or anything in between. 
-              My goal is to always build products that provide pixel-perfect, performant experiences.
+              I create things that live on the internet: websites, servers, bots, applications,
+              Wechat mini-programs, blockchains, or anything in between. My goal is to always build
+              products that provide pixel-perfect, performant experiences.
             </p>
 
             <p>
-              After graduating from{' '}
-              <a href="https://www.em-lyon.com">EMLYON Business School</a>, I spent the
-              next 7 years in project management team at <a href="https://www.accenture.com">Accenture (France)</a>, 
-              <a href="https://www.lexmark.com">Lexmark (Russia)</a>, 
-              <a href="https://www.netconcepts.cn">Netconcepts (China)</a>, where I worked
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              After graduating from <a href="https://www.em-lyon.com">EMLYON Business School</a>, I
+              spent the next 7 years in project management team at{' '}
+              <a href="https://www.accenture.com">Accenture (France)</a>,
+              <a href="https://www.lexmark.com">Lexmark (Russia)</a>,
+              <a href="https://www.netconcepts.cn"> Netconcepts (China)</a>, where I ran operations
+              on a wide variety of interesting and meaningful IT projects.
             </p>
-            <p>I work in English, French, Russian, Chinese, Japanese and Spanish.</p> 
+            <p>I work in English, French, Russian, Chinese, Japanese and Spanish.</p>
 
             <p>Here are a few technologies I've been working with recently:</p>
           </div>
