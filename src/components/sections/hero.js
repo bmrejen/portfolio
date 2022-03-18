@@ -52,8 +52,8 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build things for the web.</h3>;
   const four = (
     <p>
-      I'm a software engineer based in Shanghai, China specializing in building blockchains, 
-      applications, electronics and everything in between.
+      I'm a software engineer based in Paris, Tel-Aviv and Shanghai, specializing in building
+      blockchains, applications, electronics and everything in between.
     </p>
   );
   const five = (
