@@ -16,7 +16,7 @@ import {
   IconStar,
   IconTwitter,
   IconZap,
-} from '@components/icons';
+} from './index';
 
 const Icon = ({ name }) => {
   switch (name) {

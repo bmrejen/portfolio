@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
-import sr from '@utils/sr';
-import { srConfig } from '@config';
-import { Icon } from '@components/icons';
+import sr from '../../utils/sr';
+import { srConfig } from '../../config';
+import { Icon } from '../icons';
 
 const StyledProject = styled.div`
   display: grid;
@@ -267,7 +267,7 @@ const Featured = () => {
   const featuredProjects = data.featured.edges.filter(({ node }) => node);
 
   const revealTitle = useRef(null);
-  const revealProjects = useRef([]);
+  const revealProjects = useRef(Array());
   useEffect(() => {
     sr.reveal(revealTitle.current, srConfig());
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
@@ -286,7 +286,7 @@ const Featured = () => {
             const { external, title, tech, github, cover } = frontmatter;
 
             return (
-              <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
+              <StyledProject key={i} ref={el => { if (revealProjects.current) revealProjects.current[i] = el; }}>
                 <div className="project-content">
                   <p className="project-overline">Featured Project</p>
                   <h3 className="project-title">{title}</h3>
@@ -316,7 +316,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
+                    {(() => { const img = getImage(cover); return img && <GatsbyImage image={img} alt={title} className="img" />; })()}
                   </a>
                 </div>
               </StyledProject>

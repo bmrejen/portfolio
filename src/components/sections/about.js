@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '../../config';
 import sr from '../../utils/sr';
@@ -167,7 +167,7 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <Img fluid={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" />
+            <GatsbyImage image={data.avatar.childImageSharp.fluid} alt="Avatar" className="img" />
           </div>
         </StyledPic>
       </div>
