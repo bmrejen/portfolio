@@ -141,13 +141,16 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Ben, a fullstack engineer based in Shanghai with 6+ years of experience building and scaling production-grade apps.</p>
+            <p>Hello! I'm Ben, a fullstack engineer with 6+ years of experience building and scaling production-grade apps.</p>
             <p>
-              I work with founders and CTOs to ship clean, maintainable tools fast: a new SaaS MVP from scratch, automated internal tools, improving architecture for sale, implementing AI or blockchain solutions. My goal is to always build products that provide pixel-perfect, performant experiences.
+              I work with founders and CTOs to ship clean, maintainable tools fast: new MVPs from scratch, automated internal tools, improved architectures, AI and blockchain solutions. My goal is to always build products that provide pixel-perfect, performant experiences.
             </p>
             <p>
-              Before tech, I built several businesses: Ivy Consulting (cross-border edtech), Académie de France (language training) and a fully booked gueshouse. After graduating from <a href="https://www.em-lyon.com">EMLYON Business School</a>, I
-              spent the next 7 years in project management team at{' '}
+              Before tech, I built several businesses: Ivy Consulting (cross-border edtech), Académie de France (language training) and a fully booked guesthouse.
+            </p>
+            <p>
+              After graduating from <a href="https://www.em-lyon.com">EMLYON Business School</a>, I
+              spent the next 7 years in project management teams at{' '}
               <a href="https://www.accenture.com">Accenture (France)</a>,
               <a href="https://www.lexmark.com">Lexmark (Russia)</a>,
               <a href="https://www.netconcepts.cn"> Netconcepts (China)</a>, and
