@@ -2,9 +2,9 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
+
 import styled from 'styled-components';
-import { Layout } from '@components';
+import { Layout } from '../components';
 
 const StyledPostContainer = styled.main`
   max-width: 1000px;
@@ -34,12 +34,20 @@ const StyledPostContent = styled.div`
 `;
 
 const PostTemplate = ({ data, location }) => {
+  if (!data.markdownRemark) {
+    return (
+      <Layout location={location}>
+        <div>Post not found</div>
+      </Layout>
+    );
+  }
+  
   const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags } = frontmatter;
 
   return (
     <Layout location={location}>
-      <Helmet title={title} />
+
 
       <StyledPostContainer>
         <span className="breadcrumb">
