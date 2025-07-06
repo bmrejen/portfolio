@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
-import anime from 'animejs';
+import { Timeline } from 'animejs';
 import styled from 'styled-components';
-import { IconLoader } from '@components/icons';
+import IconLoader from './icons/loader';
 
 const StyledLoader = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -38,34 +37,30 @@ const StyledLoader = styled.div`
 
 const Loader = ({ finishLoading }) => {
   const animate = () => {
-    const loader = anime.timeline({
-      complete: () => finishLoading(),
+    const loader = new Timeline({
+      onComplete: () => finishLoading(),
     });
 
     loader
-      .add({
-        targets: '#logo path',
+      .add('#logo path', {
         delay: 300,
         duration: 1500,
         easing: 'easeInOutQuart',
-        strokeDashoffset: [anime.setDashoffset, 0],
+        strokeDashoffset: [0, 1000],
       })
-      .add({
-        targets: '#logo #B',
+      .add('#logo #B', {
         duration: 700,
         easing: 'easeInOutQuart',
         opacity: 1,
       })
-      .add({
-        targets: '#logo',
+      .add('#logo', {
         delay: 500,
         duration: 300,
         easing: 'easeInOutQuart',
         opacity: 0,
         scale: 0.1,
       })
-      .add({
-        targets: '.loader',
+      .add('.loader', {
         duration: 200,
         easing: 'easeInOutQuart',
         opacity: 0,
@@ -83,7 +78,6 @@ const Loader = ({ finishLoading }) => {
 
   return (
     <StyledLoader className="loader" isMounted={isMounted}>
-      <Helmet bodyAttributes={{ class: `hidden` }} />
 
       <div className="logo-wrapper">
         <IconLoader />
