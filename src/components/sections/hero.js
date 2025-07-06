@@ -52,13 +52,12 @@ const Hero = () => {
   const three = <h3 className="big-heading">I build things for the web.</h3>;
   const four = (
     <p>
-      I'm a software engineer based in Paris, Tel-Aviv and Shanghai, specializing in building
-      blockchains, applications, electronics and everything in between.
+      I'm a fullstack engineer helping founders and CTOs build fast, scale cleanly, and iterate with confidence. I bring 6+ years of experience across fintech, edtech, and Web3 — from MVPs to microservices. I speak five languages and care as much about ROI as code.
     </p>
   );
   const five = (
     <a href={`mailto:${email}`} className="email-link">
-      Get In Touch
+      Book a Call
     </a>
   );
 
