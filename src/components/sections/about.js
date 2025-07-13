@@ -151,7 +151,8 @@ const About = () => {
               spent the next 7 years in project management teams at{' '}
               <a href="https://www.accenture.com">Accenture (France)</a>,
               <a href="https://www.lexmark.com">Lexmark (Russia)</a>,
-              <a href="https://www.netconcepts.cn"> Netconcepts (China)</a>, and
+              <a href="https://www.netconcepts.cn"> Netconcepts (China)</a>
+              <span>, and </span>
               <a href="https://www.veriti.ai"> Veriti.ai (Israel)</a>,
             </p>
             <p>I work in English, French, Russian, Chinese, Japanese and Spanish.</p>
