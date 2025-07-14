@@ -70,14 +70,11 @@ const StyledCredit = styled.div`
 
 const Footer = () => {
   const [githubInfo, setGitHubInfo] = useState({
-    stars: null,
-    forks: null,
+    stars: 0,
+    forks: 0,
   });
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') {
-      return;
-    }
     fetch('https://api.github.com/repos/bchiang7/v4')
       .then(response => response.json())
       .then(json => {
@@ -113,11 +110,11 @@ const Footer = () => {
             <div className="github-stats">
               <span>
                 <Icon name="Star" />
-                <span>{githubInfo.stars.toLocaleString()}</span>
+                <span>{githubInfo.stars?.toLocaleString()}</span>
               </span>
               <span>
                 <Icon name="Fork" />
-                <span>{githubInfo.forks.toLocaleString()}</span>
+                <span>{githubInfo.forks?.toLocaleString()}</span>
               </span>
             </div>
           )}
