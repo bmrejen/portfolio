@@ -193,7 +193,7 @@ const Projects = () => {
                 exit={false}>
                 <StyledProject
                   key={i}
-                  ref={el => (revealProjects.current[i] = el)}
+                  ref={el => (revealProjects.current[i] == el)}
                   tabIndex="0"
                   style={{
                     transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
