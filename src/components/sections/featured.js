@@ -248,9 +248,11 @@ const Featured = () => {
               title
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 700, traceSVG: { color: "#64ffda" }) {
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
+                  gatsbyImageData(
+                    width: 700
+                    placeholder: TRACED_SVG
+                    formats: [AUTO, WEBP, AVIF]
+                  )
                 }
               }
               tech
@@ -285,6 +287,8 @@ const Featured = () => {
             const { frontmatter, html } = node;
             const { external, title, tech, github, cover } = frontmatter;
 
+            const img = getImage(cover?.childImageSharp?.gatsbyImageData);
+
             return (
               <StyledProject key={i} ref={el => { if (revealProjects.current) revealProjects.current[i] = el; }}>
                 <div className="project-content">
@@ -316,7 +320,7 @@ const Featured = () => {
 
                 <div className="project-image">
                   <a href={external ? external : github ? github : '#'}>
-                    {(() => { const img = getImage(cover); return img && <GatsbyImage image={img} alt={title} className="img" />; })()}
+                    {img && <GatsbyImage image={img} alt={title} className="img" />}
                   </a>
                 </div>
               </StyledProject>
