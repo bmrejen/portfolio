@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 import Fonts from './fonts';
 import TransitionStyles from './TransitionStyles';
 import PrismStyles from './PrismStyles';
+import mixins from './mixins';
 
 const GlobalStyle = createGlobalStyle`
   ${Fonts};
@@ -260,7 +261,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     &.inline-link {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink}
     }
   }
 
@@ -294,7 +295,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     & > a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
     }
 
     & > code {
@@ -381,7 +382,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
       line-height: 1.5;
     }
   }
@@ -399,7 +400,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
       font-family: var(--font-mono);
       font-size: var(--fz-sm);
       font-weight: 600;

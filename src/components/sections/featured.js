@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import sr from '../../utils/sr';
 import { srConfig } from '../../config';
 import { Icon } from '../icons';
+import mixins from '../../styles/mixins';
 
 const StyledProject = styled.div`
   display: grid;
@@ -107,7 +108,7 @@ const StyledProject = styled.div`
   }
 
   .project-description {
-    ${({ theme }) => theme.mixins.boxShadow};
+    ${mixins.boxShadow};
     position: relative;
     z-index: 2;
     padding: 25px;
@@ -127,7 +128,7 @@ const StyledProject = styled.div`
     }
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
     }
   }
 
@@ -175,7 +176,7 @@ const StyledProject = styled.div`
   }
 
   .project-image {
-    ${({ theme }) => theme.mixins.boxShadow};
+    ${mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
     position: relative;

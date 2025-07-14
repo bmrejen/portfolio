@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Icon } from '@components/icons';
-import { socialMedia } from '@config';
+import { Icon } from './icons';
+import { socialMedia } from '../config';
+import mixins from '../styles/mixins';
 
 const StyledFooter = styled.footer`
-  ${({ theme }) => theme.mixins.flexCenter};
+  ${mixins.flexCenter};
   flex-direction: column;
   height: auto;
   min-height: 70px;
@@ -25,7 +26,7 @@ const StyledSocialLinks = styled.div`
   }
 
   ul {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     padding: 0;
     margin: 0;
     list-style: none;
@@ -104,7 +105,7 @@ const Footer = () => {
         </ul>
       </StyledSocialLinks>
 
-      <StyledCredit tabindex="-1">
+      <StyledCredit tabIndex={-1}>
         <a href="https://github.com/bchiang7/v4">
           <div>Designed &amp; Built by Brittany Chiang</div>
 

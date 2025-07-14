@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
-import sr from '@utils/sr';
+import { srConfig, email } from '../../config';
+import sr from '../../utils/sr';
+import mixins from '../../styles/mixins';
 
 const StyledContactSection = styled.section`
   max-width: 600px;
@@ -35,7 +36,8 @@ const StyledContactSection = styled.section`
   }
 
   .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
+    ${mixins.bigButton};
+
     margin-top: 50px;
   }
 `;

@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { Icon } from '@components/icons';
+import { srConfig } from '../../config';
+import sr from '../../utils/sr';
+import { Icon } from '../icons';
+import mixins from '../../styles/mixins';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -36,7 +37,7 @@ const StyledProjectsSection = styled.section`
   }
 
   .more-button {
-    ${({ theme }) => theme.mixins.button};
+    ${mixins.button};
     margin: 80px auto 0;
   }
 `;
@@ -54,8 +55,8 @@ const StyledProject = styled.div`
   }
 
   .project-inner {
-    ${({ theme }) => theme.mixins.boxShadow};
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.boxShadow};
+    ${mixins.flexBetween};
     flex-direction: column;
     align-items: flex-start;
     position: relative;
@@ -67,7 +68,7 @@ const StyledProject = styled.div`
   }
 
   .project-top {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     margin-bottom: 30px;
 
     .folder {
@@ -104,7 +105,7 @@ const StyledProject = styled.div`
     font-size: 17px;
 
     a {
-      ${({ theme }) => theme.mixins.inlineLink};
+      ${mixins.inlineLink};
     }
   }
 

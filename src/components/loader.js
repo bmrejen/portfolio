@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Timeline } from 'animejs';
 import styled from 'styled-components';
 import IconLoader from './icons/loader';
+import mixins from '../styles/mixins';
 
 const StyledLoader = styled.div`
-  ${({ theme }) => theme.mixins.flexCenter};
+  ${mixins.flexCenter};
   position: fixed;
   top: 0;
   bottom: 0;

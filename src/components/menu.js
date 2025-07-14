@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import { navLinks } from '@config';
-import { KEY_CODES } from '@utils';
-import { useOnClickOutside } from '@hooks';
+import { navLinks } from '../config';
+import { KEY_CODES } from '../utils';
+import { useOnClickOutside } from '../hooks';
+import mixins from '../styles/mixins';
 
 const StyledMenu = styled.div`
   display: none;
@@ -18,7 +19,7 @@ const StyledHamburgerButton = styled.button`
   display: none;
 
   @media (max-width: 768px) {
-    ${({ theme }) => theme.mixins.flexCenter};
+    ${mixins.flexCenter};
     position: relative;
     z-index: 10;
     margin-right: -15px;
@@ -89,7 +90,7 @@ const StyledSidebar = styled.aside`
   display: none;
 
   @media (max-width: 768px) {
-    ${({ theme }) => theme.mixins.flexCenter};
+    ${mixins.flexCenter};
     position: fixed;
     top: 0;
     bottom: 0;
@@ -107,7 +108,7 @@ const StyledSidebar = styled.aside`
   }
 
   nav {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     width: 100%;
     flex-direction: column;
     color: var(--lightest-slate);
@@ -141,14 +142,14 @@ const StyledSidebar = styled.aside`
     }
 
     a {
-      ${({ theme }) => theme.mixins.link};
+      ${mixins.link};
       width: 100%;
       padding: 3px 20px 20px;
     }
   }
 
   .resume-link {
-    ${({ theme }) => theme.mixins.bigButton};
+    ${mixins.bigButton};
     padding: 18px 50px;
     margin: 10% auto 0;
     width: max-content;

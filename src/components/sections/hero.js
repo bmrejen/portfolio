@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { email } from '@config';
-import { navDelay, loaderDelay } from '@utils';
+import { email } from '../../config';
+import { navDelay, loaderDelay } from '../../utils';
+import mixins from '../../styles/mixins';
 
 const StyledHeroSection = styled.section`
-  ${({ theme }) => theme.mixins.flexCenter};
+  ${mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
   min-height: 70vh;
@@ -34,7 +35,8 @@ const StyledHeroSection = styled.section`
   }
 
   .email-link {
-    ${({ theme }) => theme.mixins.bigButton};
+    ${mixins.bigButton};
+
     margin-top: 50px;
   }
 `;

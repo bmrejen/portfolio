@@ -4,8 +4,9 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { Layout } from '@components';
-import { IconZap } from '@components/icons';
+import Layout from '../../components/layout';
+import { IconZap } from '../../components/icons';
+import mixins from '../../styles/mixins';
 
 const StyledMainContainer = styled.main`
   & > header {
@@ -23,7 +24,7 @@ const StyledMainContainer = styled.main`
   }
 
   footer {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     width: 100%;
     margin-top: 20px;
   }
@@ -43,8 +44,8 @@ const StyledGrid = styled.div`
   }
 `;
 const StyledPostInner = styled.div`
-  ${({ theme }) => theme.mixins.boxShadow};
-  ${({ theme }) => theme.mixins.flexBetween};
+  ${mixins.boxShadow};
+  ${mixins.flexBetween};
   flex-direction: column;
   align-items: flex-start;
   position: relative;
@@ -72,7 +73,7 @@ const StyledPost = styled.div`
   }
 `;
 const StyledPostHeader = styled.div`
-  ${({ theme }) => theme.mixins.flexBetween};
+  ${mixins.flexBetween};
   margin-bottom: 30px;
 `;
 const StyledFolder = styled.div`
@@ -143,7 +144,7 @@ const PensievePage = ({ location, data }) => {
                 const d = new Date(date);
 
                 return (
-                  <StyledPost key={i} tabIndex="0">
+                  <StyledPost key={i} tabIndex={0}>
                     <StyledPostInner>
                       <header>
                         <Link to={slug}>

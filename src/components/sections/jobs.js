@@ -2,9 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import { KEY_CODES } from '@utils';
-import sr from '@utils/sr';
+import { srConfig } from '../../config';
+import { KEY_CODES } from '../../utils';
+import sr from '../../utils/sr';
+import mixins from '../../styles/mixins';
 
 const StyledJobsSection = styled.section`
   max-width: 700px;
@@ -59,7 +60,7 @@ const StyledTabList = styled.ul`
 `;
 
 const StyledTabButton = styled.button`
-  ${({ theme }) => theme.mixins.link};
+  ${mixins.link};
   display: flex;
   align-items: center;
   width: 100%;
@@ -77,7 +78,7 @@ const StyledTabButton = styled.button`
     padding: 0 15px 2px;
   }
   @media (max-width: 600px) {
-    ${({ theme }) => theme.mixins.flexCenter};
+    ${mixins.flexCenter};
     min-width: 120px;
     padding: 0 15px;
     border-left: 0;
@@ -132,7 +133,7 @@ const StyledTabContent = styled.div`
   }
 
   ul {
-    ${({ theme }) => theme.mixins.fancyList};
+    ${mixins.fancyList};
   }
 
   h3 {

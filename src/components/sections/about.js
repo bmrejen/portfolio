@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '../../config';
 import sr from '../../utils/sr';
+import mixins from '../../styles/mixins';
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -55,7 +56,7 @@ const StyledPic = styled.div`
   }
 
   .wrapper {
-    ${({ theme }) => theme.mixins.boxShadow};
+    ${mixins.boxShadow};
     display: block;
     position: relative;
     width: 100%;

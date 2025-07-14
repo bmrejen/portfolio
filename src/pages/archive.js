@@ -3,10 +3,11 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import { srConfig } from '@config';
-import sr from '@utils/sr';
-import { Layout } from '@components';
-import { Icon } from '@components/icons';
+import { srConfig } from '../config';
+import sr from '../utils/sr';
+import Layout from '../components/layout';
+import { Icon } from '../components/icons';
+import mixins from '../styles/mixins';
 
 const StyledTableContainer = styled.div`
   margin: 100px -20px;
@@ -115,7 +116,7 @@ const StyledTableContainer = styled.div`
           align-items: center;
 
           a {
-            ${({ theme }) => theme.mixins.flexCenter};
+            ${mixins.flexCenter};
             flex-shrink: 0;
           }
 

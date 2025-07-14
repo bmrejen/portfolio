@@ -3,14 +3,15 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
-import { navLinks } from '@config';
-import { loaderDelay } from '@utils';
-import { useScrollDirection } from '@hooks';
-import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
+import { navLinks } from '../config';
+import { loaderDelay } from '../utils';
+import { useScrollDirection } from '../hooks';
+import Menu from './menu';
+import { IconLogo } from './icons';
+import mixins from '../styles/mixins';
 
 const StyledHeader = styled.header`
-  ${({ theme }) => theme.mixins.flexBetween};
+  ${mixins.flexBetween};
   position: fixed;
   top: 0;
   z-index: 11;
@@ -52,7 +53,7 @@ const StyledHeader = styled.header`
 `;
 
 const StyledNav = styled.nav`
-  ${({ theme }) => theme.mixins.flexBetween};
+  ${mixins.flexBetween};
   position: relative;
   width: 100%;
   color: var(--lightest-slate);
@@ -61,7 +62,7 @@ const StyledNav = styled.nav`
   z-index: 12;
 
   .logo {
-    ${({ theme }) => theme.mixins.flexCenter};
+    ${mixins.flexCenter};
 
     a {
       color: var(--green);
@@ -93,7 +94,7 @@ const StyledLinks = styled.div`
   }
 
   ol {
-    ${({ theme }) => theme.mixins.flexBetween};
+    ${mixins.flexBetween};
     padding: 0;
     margin: 0;
     list-style: none;
@@ -119,7 +120,7 @@ const StyledLinks = styled.div`
   }
 
   .resume-button {
-    ${({ theme }) => theme.mixins.smallButton};
+    ${mixins.smallButton};
     margin-left: 15px;
     font-size: var(--fz-xs);
   }
